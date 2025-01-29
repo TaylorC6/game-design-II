@@ -1,6 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://1gkpwy53fp1o"]
+[gd_scene load_steps=15 format=3 uid="uid://1gkpwy53fp1o"]
 
-[ext_resource type="Script" path="res://Practice/player_3d.gd" id="1_jgacb"]
+[ext_resource type="PackedScene" uid="uid://b4migi0ol3kpg" path="res://Practice/player_3d.tscn" id="1_wb6nm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jrb7e"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -36,10 +36,14 @@ albedo_color = Color(0, 0, 1, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dogiu"]
 albedo_color = Color(1, 0, 1, 1)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_h1ouo"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cv52p"]
+albedo_color = Color(0, 0.513726, 0.168627, 1)
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tghps"]
-height = 1.98259
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qd3fx"]
+albedo_color = Color(1, 0.0666667, 0.0705882, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5onpj"]
+albedo_color = Color(1, 0.533333, 0.0470588, 1)
 
 [node name="scene_3d" type="Node3D"]
 
@@ -54,70 +58,88 @@ shadow_enabled = true
 use_collision = true
 mesh = SubResource("PlaneMesh_q71s0")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
+[node name="Blocks" type="CSGBox3D" parent="."]
 transform = Transform3D(0.952177, 0, 0.305546, 0, 1, 0, -0.305546, 0, 0.952177, -0.939882, 0.46205, -8.94503)
 use_collision = true
 material = SubResource("StandardMaterial3D_2dk2x")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+[node name="Blocks2" type="CSGBox3D" parent="."]
 transform = Transform3D(0.428588, 0, -0.9035, 0, 1, 0, 0.9035, 0, 0.428588, 0.657979, 0.994839, -10.3812)
 use_collision = true
 material = SubResource("StandardMaterial3D_lh0qa")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+[node name="Blocks3" type="CSGBox3D" parent="."]
 transform = Transform3D(0.13089, 0, -0.991397, 0, 1, 0, 0.991397, 0, 0.13089, -0.6184, 1.50886, -12.2798)
 use_collision = true
 material = SubResource("StandardMaterial3D_rfuer")
 
-[node name="CSGPolygon3D" type="CSGPolygon3D" parent="."]
+[node name="Blue" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.985627, 1.76225, -14.6968)
 use_collision = true
 polygon = PackedVector2Array(0, 0, -2.02823, 1.08276, 3.18051, 1.08947, 1, 0)
 depth = 4.0
 material = SubResource("StandardMaterial3D_4abq1")
 
-[node name="CSGPolygon3D2" type="CSGPolygon3D" parent="."]
+[node name="Pink" type="CSGPolygon3D" parent="."]
 transform = Transform3D(-0.00703357, 0, -0.999975, -0.378252, 0.925699, 0.00266053, 0.925676, 0.378261, -0.00651097, -4.57124, 3.45925, -23.2002)
 use_collision = true
 polygon = PackedVector2Array(0, 0, -2.02823, 1.08276, 3.18051, 1.08947, 1, 0)
 depth = 0.63
 material = SubResource("StandardMaterial3D_dogiu")
 
-[node name="CSGPolygon3D3" type="CSGPolygon3D" parent="."]
+[node name="Pink2" type="CSGPolygon3D" parent="."]
 transform = Transform3D(-0.00703357, 0, -0.999975, -0.378252, 0.925699, 0.00266053, 0.925676, 0.378261, -0.00651097, -1.89492, 5.98814, -28.1276)
 use_collision = true
 polygon = PackedVector2Array(0, 0, -2.02823, 1.08276, 3.18051, 1.08947, 1, 0)
 depth = 0.63
 material = SubResource("StandardMaterial3D_dogiu")
 
-[node name="CSGPolygon3D4" type="CSGPolygon3D" parent="."]
+[node name="Pink3" type="CSGPolygon3D" parent="."]
 transform = Transform3D(-0.00703357, 0, -0.999975, -0.378252, 0.925699, 0.00266053, 0.925676, 0.378261, -0.00651097, 1.17301, 8.23833, -32.7358)
 use_collision = true
 polygon = PackedVector2Array(0, 0, -2.02823, 1.08276, 3.18051, 1.08947, 1, 0)
 depth = 0.63
 material = SubResource("StandardMaterial3D_dogiu")
 
-[node name="CSGPolygon3D5" type="CSGPolygon3D" parent="."]
+[node name="Green" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.0807556, -0.996734, 0, 0.996734, 0.0807556, -1.39227, -5.98566, -33.6217)
 use_collision = true
 depth = 16.76
+material = SubResource("StandardMaterial3D_cv52p")
 
-[node name="Player3d" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.27065, 0)
-script = ExtResource("1_jgacb")
+[node name="Green2" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.115197, -0.993343, 0, 0.993343, -0.115197, -4.39302, -5.98566, -33.6217)
+use_collision = true
+depth = 16.76
+material = SubResource("StandardMaterial3D_cv52p")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player3d"]
-mesh = SubResource("CapsuleMesh_h1ouo")
+[node name="Green3" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0538174, -0.998551, 0, 0.998551, -0.0538174, -7.76165, -5.98566, -34.8044)
+use_collision = true
+depth = 16.76
+material = SubResource("StandardMaterial3D_cv52p")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player3d"]
-shape = SubResource("CapsuleShape3D_tghps")
+[node name="Red" type="CSGPolygon3D" parent="."]
+transform = Transform3D(0.54521, 0.0429381, 0.837199, 0.8383, -0.0279259, -0.544494, 0, 0.998687, -0.0512205, -9.80033, 10.7413, -33.9665)
+use_collision = true
+depth = 16.76
+material = SubResource("StandardMaterial3D_qd3fx")
 
-[node name="Head" type="Node3D" parent="Player3d"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.532161, 0)
+[node name="Red2" type="CSGPolygon3D" parent="."]
+transform = Transform3D(-0.343332, 0.048107, 0.937981, 0.939214, 0.0175856, 0.342881, 0, 0.998687, -0.0512205, -8.22429, 26.3807, -34.9169)
+use_collision = true
+depth = 16.76
+material = SubResource("StandardMaterial3D_qd3fx")
 
-[node name="Camera3D" type="Camera3D" parent="Player3d/Head"]
-current = true
-fov = 90.0
+[node name="Blue2" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4432, 25.1436, -30.8744)
+use_collision = true
+polygon = PackedVector2Array(0, 0, -2.02823, 1.08276, 5.01788, 1.08677, 2.85812, 0.0342064)
+depth = 8.12
+material = SubResource("StandardMaterial3D_5onpj")
+
+[node name="Player3d" parent="." instance=ExtResource("1_wb6nm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03098, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.646882, -0.60723, 0.461319, -0.00162166, 0.603841, 0.797103, -0.762588, -0.51638, 0.389629, 4.10379, 5.83205, 3.81948)
