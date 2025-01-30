@@ -1,25 +1,26 @@
-[gd_scene load_steps=15 format=3 uid="uid://1gkpwy53fp1o"]
+[gd_scene load_steps=23 format=3 uid="uid://1gkpwy53fp1o"]
 
+[ext_resource type="PackedScene" uid="uid://bmev31udwolly" path="res://Practice/elevator.tscn" id="1_4pf2i"]
 [ext_resource type="PackedScene" uid="uid://b4migi0ol3kpg" path="res://Practice/player_3d.tscn" id="1_wb6nm"]
+[ext_resource type="Texture2D" uid="uid://cisid38qlqjtu" path="res://assets/textures/MorningSkyHDRI007A_4K-TONEMAPPED.jpg" id="1_wbvbq"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_anybl"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_ehnbr"]
+[ext_resource type="Resource" path="res://assets/terrains/scene_3d/data.hterrain" id="3_tq83y"]
+[ext_resource type="Texture2D" uid="uid://xq6dhjhbiel7" path="res://assets/textures/Grass001_1K-JPG/Grass001_1K-JPG_Color.jpg" id="6_yj76t"]
+[ext_resource type="Texture2D" uid="uid://dp1hs43bhpjrh" path="res://assets/textures/Ground078_1K-JPG/Ground078_1K-JPG_Color.jpg" id="7_la58l"]
+[ext_resource type="Texture2D" uid="uid://8dwh7rnw0dnq" path="res://assets/textures/Grass001_1K-JPG/Grass001_1K-JPG_NormalGL.jpg" id="8_k6r6u"]
+[ext_resource type="Texture2D" uid="uid://c10cd248dt5b7" path="res://assets/textures/Ground078_1K-JPG/Ground078_1K-JPG_NormalGL.jpg" id="9_nylso"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jrb7e"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fbsoe"]
+panorama = ExtResource("1_wbvbq")
 
 [sub_resource type="Sky" id="Sky_4s058"]
-sky_material = SubResource("ProceduralSkyMaterial_jrb7e")
+sky_material = SubResource("PanoramaSkyMaterial_fbsoe")
 
 [sub_resource type="Environment" id="Environment_oy2nk"]
 background_mode = 2
 sky = SubResource("Sky_4s058")
 tonemap_mode = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fnehy"]
-albedo_color = Color(0.0588235, 0.372549, 0, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_q71s0"]
-material = SubResource("StandardMaterial3D_fnehy")
-size = Vector2(500, 500)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dk2x"]
 albedo_color = Color(0.758192, 0.758192, 0.758192, 1)
@@ -45,6 +46,11 @@ albedo_color = Color(1, 0.0666667, 0.0705882, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5onpj"]
 albedo_color = Color(1, 0.533333, 0.0470588, 1)
 
+[sub_resource type="Resource" id="Resource_83cvt"]
+script = ExtResource("3_ehnbr")
+mode = 0
+textures = [[ExtResource("6_yj76t"), ExtResource("7_la58l")], [ExtResource("8_k6r6u"), ExtResource("9_nylso")]]
+
 [node name="scene_3d" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -53,10 +59,6 @@ environment = SubResource("Environment_oy2nk")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
-use_collision = true
-mesh = SubResource("PlaneMesh_q71s0")
 
 [node name="Blocks" type="CSGBox3D" parent="."]
 transform = Transform3D(0.952177, 0, 0.305546, 0, 1, 0, -0.305546, 0, 0.952177, -0.939882, 0.46205, -8.94503)
@@ -137,6 +139,28 @@ use_collision = true
 polygon = PackedVector2Array(0, 0, -2.02823, 1.08276, 5.01788, 1.08677, 2.85812, 0.0342064)
 depth = 8.12
 material = SubResource("StandardMaterial3D_5onpj")
+
+[node name="Elevator" parent="." instance=ExtResource("1_4pf2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.09753, 26.5806, -36.2473)
+
+[node name="HTerrain" type="Node3D" parent="."]
+script = ExtResource("2_anybl")
+centered = true
+_terrain_data = ExtResource("3_tq83y")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_83cvt")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = null
+shader_params/u_tile_reduction = null
 
 [node name="Player3d" parent="." instance=ExtResource("1_wb6nm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03098, 0)

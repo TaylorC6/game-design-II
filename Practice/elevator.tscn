@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmev31udwolly"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yx0u8"]
+albedo_color = Color(0.758192, 0.758192, 0.758192, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rr2tc"]
+albedo_color = Color(0.385493, 0.385492, 0.385492, 1)
+
+[node name="Elevator" type="Node3D"]
+
+[node name="Floor" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24438, -0.175459, 1.24679)
+use_collision = true
+size = Vector3(2.5, 0.35, 2.5)
+material = SubResource("StandardMaterial3D_yx0u8")
+
+[node name="Top" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24438, 3.17423, 1.24679)
+use_collision = true
+size = Vector3(2.5, 0.35, 2.5)
+material = SubResource("StandardMaterial3D_yx0u8")
+
+[node name="Pillar" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0.000762939, 0.243121, 0.263936, 0.240046, 0.261919, 0.0115793)
+depth = 3.0
+material = SubResource("StandardMaterial3D_rr2tc")
+
+[node name="Pillar2" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.23097, 0, -0.0127752)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0.000762939, 0.243121, 0.263936, 0.240046, 0.261919, 0.0115793)
+depth = 3.0
+material = SubResource("StandardMaterial3D_rr2tc")
+
+[node name="Pillar3" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.23025, 0, 2.25662)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0.000762939, 0.243121, 0.263936, 0.240046, 0.261919, 0.0115793)
+depth = 3.0
+material = SubResource("StandardMaterial3D_rr2tc")
+
+[node name="Pillar4" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.00521192, 0, 2.25662)
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0.000762939, 0.243121, 0.263936, 0.240046, 0.261919, 0.0115793)
+depth = 3.0
+material = SubResource("StandardMaterial3D_rr2tc")
