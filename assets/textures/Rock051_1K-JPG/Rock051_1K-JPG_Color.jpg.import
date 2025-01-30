@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bashmhnpysdt"
-path.s3tc="res://.godot/imported/Metal048B_1K-JPG_Color.jpg-0819eb15623ba013b94353078ba814f2.s3tc.ctex"
+uid="uid://bo7fgyxpdqwe5"
+path.s3tc="res://.godot/imported/Rock051_1K-JPG_Color.jpg-827c95fdf94699d46b44c3854224f64d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/textures/Metal048B_1K-JPG/Metal048B_1K-JPG_Color.jpg"
-dest_files=["res://.godot/imported/Metal048B_1K-JPG_Color.jpg-0819eb15623ba013b94353078ba814f2.s3tc.ctex"]
+source_file="res://assets/textures/Rock051_1K-JPG/Rock051_1K-JPG_Color.jpg"
+dest_files=["res://.godot/imported/Rock051_1K-JPG_Color.jpg-827c95fdf94699d46b44c3854224f64d.s3tc.ctex"]
 
 [params]
 

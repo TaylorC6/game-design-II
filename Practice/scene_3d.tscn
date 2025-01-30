@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://1gkpwy53fp1o"]
+[gd_scene load_steps=27 format=3 uid="uid://1gkpwy53fp1o"]
 
 [ext_resource type="PackedScene" uid="uid://bmev31udwolly" path="res://Practice/elevator.tscn" id="1_4pf2i"]
 [ext_resource type="PackedScene" uid="uid://b4migi0ol3kpg" path="res://Practice/player_3d.tscn" id="1_wb6nm"]
@@ -8,8 +8,12 @@
 [ext_resource type="Resource" path="res://assets/terrains/scene_3d/data.hterrain" id="3_tq83y"]
 [ext_resource type="Texture2D" uid="uid://xq6dhjhbiel7" path="res://assets/textures/Grass001_1K-JPG/Grass001_1K-JPG_Color.jpg" id="6_yj76t"]
 [ext_resource type="Texture2D" uid="uid://dp1hs43bhpjrh" path="res://assets/textures/Ground078_1K-JPG/Ground078_1K-JPG_Color.jpg" id="7_la58l"]
+[ext_resource type="Texture2D" uid="uid://bo7fgyxpdqwe5" path="res://assets/textures/Rock051_1K-JPG/Rock051_1K-JPG_Color.jpg" id="8_6nvvh"]
 [ext_resource type="Texture2D" uid="uid://8dwh7rnw0dnq" path="res://assets/textures/Grass001_1K-JPG/Grass001_1K-JPG_NormalGL.jpg" id="8_k6r6u"]
+[ext_resource type="Texture2D" uid="uid://bashmhnpysdt" path="res://assets/textures/Metal048B_1K-JPG/Metal048B_1K-JPG_Color.jpg" id="9_450fy"]
 [ext_resource type="Texture2D" uid="uid://c10cd248dt5b7" path="res://assets/textures/Ground078_1K-JPG/Ground078_1K-JPG_NormalGL.jpg" id="9_nylso"]
+[ext_resource type="Texture2D" uid="uid://cuktirupu4rp8" path="res://assets/textures/Rock051_1K-JPG/Rock051_1K-JPG_NormalGL.jpg" id="12_ps8nk"]
+[ext_resource type="Texture2D" uid="uid://b5d7pdjsvhhl3" path="res://assets/textures/Metal048B_1K-JPG/Metal048B_1K-JPG_NormalGL.jpg" id="13_4r4qb"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fbsoe"]
 panorama = ExtResource("1_wbvbq")
@@ -49,7 +53,7 @@ albedo_color = Color(1, 0.533333, 0.0470588, 1)
 [sub_resource type="Resource" id="Resource_83cvt"]
 script = ExtResource("3_ehnbr")
 mode = 0
-textures = [[ExtResource("6_yj76t"), ExtResource("7_la58l")], [ExtResource("8_k6r6u"), ExtResource("9_nylso")]]
+textures = [[ExtResource("6_yj76t"), ExtResource("7_la58l"), ExtResource("8_6nvvh"), ExtResource("9_450fy")], [ExtResource("8_k6r6u"), ExtResource("9_nylso"), ExtResource("12_ps8nk"), ExtResource("13_4r4qb")]]
 
 [node name="scene_3d" type="Node3D"]
 
