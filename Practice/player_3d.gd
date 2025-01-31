@@ -5,6 +5,7 @@ const SPRINT_SPEED = 7.5
 var speed = WALK_SPEED
 const JUMP_VELOCITY = 4.5
 
+var gravity = true
 
 var FOV_CHANGE = 1.0
 
@@ -56,8 +57,16 @@ func _physics_process(delta: float) -> void:
 		FOV_CHANGE = 1.0
 	
 	# Add the gravity.
-	if not is_on_floor():
+	if not is_on_floor() and gravity:
 		velocity += get_gravity() * delta
+	if not is_on_floor() and !gravity:
+		velocity += -get_gravity() * delta 
+	
+	
+	if Input.is_action_pressed("gravity"):
+		gravity = false
+	if Input.is_action_just_released("gravity"):
+		gravity = true
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():

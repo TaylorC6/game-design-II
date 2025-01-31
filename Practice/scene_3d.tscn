@@ -1,17 +1,26 @@
-[gd_scene load_steps=27 format=3 uid="uid://1gkpwy53fp1o"]
+[gd_scene load_steps=49 format=3 uid="uid://1gkpwy53fp1o"]
 
 [ext_resource type="PackedScene" uid="uid://bmev31udwolly" path="res://Practice/elevator.tscn" id="1_4pf2i"]
 [ext_resource type="PackedScene" uid="uid://b4migi0ol3kpg" path="res://Practice/player_3d.tscn" id="1_wb6nm"]
 [ext_resource type="Texture2D" uid="uid://cisid38qlqjtu" path="res://assets/textures/MorningSkyHDRI007A_4K-TONEMAPPED.jpg" id="1_wbvbq"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_anybl"]
+[ext_resource type="Texture2D" uid="uid://uhtg6h11lfpo" path="res://assets/textures/Concrete034_1K-JPG/Concrete034_1K-JPG_Color.jpg" id="2_cs7gq"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_ehnbr"]
 [ext_resource type="Resource" path="res://assets/terrains/scene_3d/data.hterrain" id="3_tq83y"]
+[ext_resource type="Texture2D" uid="uid://b54jwb04u3cpt" path="res://assets/textures/Concrete034_1K-JPG/Concrete034_1K-JPG_Roughness.jpg" id="3_y506n"]
+[ext_resource type="Texture2D" uid="uid://dexpcascf72kd" path="res://assets/textures/Asphalt031_1K-JPG/Asphalt031_1K-JPG_Roughness.jpg" id="4_qk1g8"]
+[ext_resource type="Texture2D" uid="uid://dsmthnvhdivh1" path="res://assets/textures/Marble012_1K-JPG/Marble012_1K-JPG_Displacement.jpg" id="5_dk0de"]
+[ext_resource type="Texture2D" uid="uid://q6v18mpox0xg" path="res://assets/textures/Metal046B_1K-JPG/Metal046B_1K-JPG_Color.jpg" id="6_swsm2"]
 [ext_resource type="Texture2D" uid="uid://xq6dhjhbiel7" path="res://assets/textures/Grass001_1K-JPG/Grass001_1K-JPG_Color.jpg" id="6_yj76t"]
 [ext_resource type="Texture2D" uid="uid://dp1hs43bhpjrh" path="res://assets/textures/Ground078_1K-JPG/Ground078_1K-JPG_Color.jpg" id="7_la58l"]
+[ext_resource type="Texture2D" uid="uid://bo15y36jij1eh" path="res://assets/textures/Metal046B_1K-JPG/Metal046B_1K-JPG_Displacement.jpg" id="7_lax03"]
 [ext_resource type="Texture2D" uid="uid://bo7fgyxpdqwe5" path="res://assets/textures/Rock051_1K-JPG/Rock051_1K-JPG_Color.jpg" id="8_6nvvh"]
 [ext_resource type="Texture2D" uid="uid://8dwh7rnw0dnq" path="res://assets/textures/Grass001_1K-JPG/Grass001_1K-JPG_NormalGL.jpg" id="8_k6r6u"]
+[ext_resource type="Texture2D" uid="uid://dtlmxw4her6lq" path="res://assets/textures/Metal046B_1K-JPG/Metal046B_1K-JPG_Roughness.jpg" id="8_lqgjv"]
 [ext_resource type="Texture2D" uid="uid://bashmhnpysdt" path="res://assets/textures/Metal048B_1K-JPG/Metal048B_1K-JPG_Color.jpg" id="9_450fy"]
 [ext_resource type="Texture2D" uid="uid://c10cd248dt5b7" path="res://assets/textures/Ground078_1K-JPG/Ground078_1K-JPG_NormalGL.jpg" id="9_nylso"]
+[ext_resource type="Texture2D" uid="uid://d35yd7kc7engp" path="res://assets/textures/Rock051_1K-JPG/Rock051_1K-JPG_Roughness.jpg" id="10_63gyp"]
+[ext_resource type="Texture2D" uid="uid://djqyl7aeqp4aj" path="res://assets/textures/Bark014_1K-JPG/Bark014_1K-JPG_Color.jpg" id="11_g4hc4"]
 [ext_resource type="Texture2D" uid="uid://cuktirupu4rp8" path="res://assets/textures/Rock051_1K-JPG/Rock051_1K-JPG_NormalGL.jpg" id="12_ps8nk"]
 [ext_resource type="Texture2D" uid="uid://b5d7pdjsvhhl3" path="res://assets/textures/Metal048B_1K-JPG/Metal048B_1K-JPG_NormalGL.jpg" id="13_4r4qb"]
 
@@ -26,26 +35,65 @@ background_mode = 2
 sky = SubResource("Sky_4s058")
 tonemap_mode = 2
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2dk2x"]
-albedo_color = Color(0.758192, 0.758192, 0.758192, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yhlv5"]
+albedo_texture = ExtResource("2_cs7gq")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwp8m"]
+albedo_texture = ExtResource("3_y506n")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q7ldq"]
+albedo_texture = ExtResource("2_cs7gq")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh0qa"]
 albedo_color = Color(0.545098, 1, 1, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_go8od"]
+albedo_texture = ExtResource("2_cs7gq")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rfuer"]
 albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qpvuc"]
+albedo_texture = ExtResource("4_qk1g8")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4abq1"]
 albedo_color = Color(0, 0, 1, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dd1q"]
+albedo_texture = ExtResource("5_dk0de")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dogiu"]
 albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wunf3"]
+albedo_texture = ExtResource("5_dk0de")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2poyr"]
+albedo_texture = ExtResource("5_dk0de")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2du6m"]
+albedo_texture = ExtResource("6_swsm2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cv52p"]
 albedo_color = Color(0, 0.513726, 0.168627, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7qcip"]
+albedo_texture = ExtResource("7_lax03")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_40x60"]
+albedo_texture = ExtResource("8_lqgjv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mycli"]
+albedo_texture = ExtResource("8_6nvvh")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qd3fx"]
 albedo_color = Color(1, 0.0666667, 0.0705882, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tiwl8"]
+albedo_texture = ExtResource("10_63gyp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cnfvv"]
+albedo_texture = ExtResource("11_g4hc4")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5onpj"]
 albedo_color = Color(1, 0.533333, 0.0470588, 1)
@@ -66,21 +114,25 @@ shadow_enabled = true
 
 [node name="Blocks" type="CSGBox3D" parent="."]
 transform = Transform3D(0.952177, 0, 0.305546, 0, 1, 0, -0.305546, 0, 0.952177, -0.939882, 3.70592, -8.94503)
+material_override = SubResource("StandardMaterial3D_yhlv5")
 use_collision = true
-material = SubResource("StandardMaterial3D_2dk2x")
+material = SubResource("StandardMaterial3D_jwp8m")
 
 [node name="Blocks2" type="CSGBox3D" parent="."]
 transform = Transform3D(0.428588, 0, -0.9035, 0, 1, 0, 0.9035, 0, 0.428588, 0.657979, 4.23871, -10.3812)
+material_override = SubResource("StandardMaterial3D_q7ldq")
 use_collision = true
 material = SubResource("StandardMaterial3D_lh0qa")
 
 [node name="Blocks3" type="CSGBox3D" parent="."]
 transform = Transform3D(0.13089, 0, -0.991397, 0, 1, 0, 0.991397, 0, 0.13089, -0.6184, 4.75273, -12.2798)
+material_override = SubResource("StandardMaterial3D_go8od")
 use_collision = true
 material = SubResource("StandardMaterial3D_rfuer")
 
 [node name="Blue" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.985627, 5.00612, -14.6968)
+material_override = SubResource("StandardMaterial3D_qpvuc")
 use_collision = true
 polygon = PackedVector2Array(0, 0, -2.02823, 1.08276, 3.18051, 1.08947, 1, 0)
 depth = 4.0
@@ -88,6 +140,7 @@ material = SubResource("StandardMaterial3D_4abq1")
 
 [node name="Pink" type="CSGPolygon3D" parent="."]
 transform = Transform3D(-0.00703357, 0, -0.999975, -0.378252, 0.925699, 0.00266053, 0.925676, 0.378261, -0.00651097, -4.57124, 6.70312, -23.2002)
+material_override = SubResource("StandardMaterial3D_4dd1q")
 use_collision = true
 polygon = PackedVector2Array(0, 0, -2.02823, 1.08276, 3.18051, 1.08947, 1, 0)
 depth = 0.63
@@ -95,6 +148,7 @@ material = SubResource("StandardMaterial3D_dogiu")
 
 [node name="Pink2" type="CSGPolygon3D" parent="."]
 transform = Transform3D(-0.00703357, 0, -0.999975, -0.378252, 0.925699, 0.00266053, 0.925676, 0.378261, -0.00651097, -1.89492, 9.23201, -28.1276)
+material_override = SubResource("StandardMaterial3D_wunf3")
 use_collision = true
 polygon = PackedVector2Array(0, 0, -2.02823, 1.08276, 3.18051, 1.08947, 1, 0)
 depth = 0.63
@@ -102,6 +156,7 @@ material = SubResource("StandardMaterial3D_dogiu")
 
 [node name="Pink3" type="CSGPolygon3D" parent="."]
 transform = Transform3D(-0.00703357, 0, -0.999975, -0.378252, 0.925699, 0.00266053, 0.925676, 0.378261, -0.00651097, 1.17301, 11.4822, -32.7358)
+material_override = SubResource("StandardMaterial3D_2poyr")
 use_collision = true
 polygon = PackedVector2Array(0, 0, -2.02823, 1.08276, 3.18051, 1.08947, 1, 0)
 depth = 0.63
@@ -109,36 +164,42 @@ material = SubResource("StandardMaterial3D_dogiu")
 
 [node name="Green" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.0807556, -0.996734, 0, 0.996734, 0.0807556, -1.39227, -2.74179, -33.6217)
+material_override = SubResource("StandardMaterial3D_2du6m")
 use_collision = true
 depth = 16.76
 material = SubResource("StandardMaterial3D_cv52p")
 
 [node name="Green2" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.115197, -0.993343, 0, 0.993343, -0.115197, -4.39302, -2.74179, -33.6217)
+material_override = SubResource("StandardMaterial3D_7qcip")
 use_collision = true
 depth = 16.76
 material = SubResource("StandardMaterial3D_cv52p")
 
 [node name="Green3" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.0538174, -0.998551, 0, 0.998551, -0.0538174, -7.76165, -2.74179, -34.8044)
+material_override = SubResource("StandardMaterial3D_40x60")
 use_collision = true
 depth = 16.76
 material = SubResource("StandardMaterial3D_cv52p")
 
 [node name="Red" type="CSGPolygon3D" parent="."]
 transform = Transform3D(0.54521, 0.0429381, 0.837199, 0.8383, -0.0279259, -0.544494, 0, 0.998687, -0.0512205, -9.80033, 13.9852, -33.9665)
+material_override = SubResource("StandardMaterial3D_mycli")
 use_collision = true
 depth = 16.76
 material = SubResource("StandardMaterial3D_qd3fx")
 
 [node name="Red2" type="CSGPolygon3D" parent="."]
 transform = Transform3D(-0.343332, 0.048107, 0.937981, 0.939214, 0.0175856, 0.342881, 0, 0.998687, -0.0512205, -8.22429, 29.6246, -34.9169)
+material_override = SubResource("StandardMaterial3D_tiwl8")
 use_collision = true
 depth = 16.76
 material = SubResource("StandardMaterial3D_qd3fx")
 
 [node name="Blue2" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4432, 28.3875, -30.8744)
+material_override = SubResource("StandardMaterial3D_cnfvv")
 use_collision = true
 polygon = PackedVector2Array(0, 0, -2.02823, 1.08276, 5.01788, 1.08677, 2.85812, 0.0342064)
 depth = 8.12

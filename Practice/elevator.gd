@@ -11,6 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
+func _on_area_3d_body_entered(body: CharacterBody3D) -> void:
 	for num in range(50):
 		$".".global_position.y += 7
+		await get_tree().create_timer(0.25).timeout

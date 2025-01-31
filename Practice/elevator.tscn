@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Practice/elevator.gd" id="1_621db"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yx0u8"]
-albedo_color = Color(0.758192, 0.758192, 0.758192, 1)
+albedo_color = Color(0, 0.912662, 0.302342, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dk87v"]
 
