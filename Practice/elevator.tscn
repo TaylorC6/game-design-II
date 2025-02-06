@@ -23,7 +23,7 @@ material = SubResource("StandardMaterial3D_yx0u8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24438, 0.175459, -1.24679)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/Area3D"]
-transform = Transform3D(1.74, 0, 0, 0, 1.74, 0, 0, 0, 1.74, 1.24438, 0.826475, 1.24679)
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 1.24438, 0.826475, 1.24679)
 shape = SubResource("BoxShape3D_dk87v")
 
 [node name="Top" type="CSGBox3D" parent="."]
@@ -61,3 +61,4 @@ depth = 3.0
 material = SubResource("StandardMaterial3D_rr2tc")
 
 [connection signal="body_entered" from="Floor/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Floor/Area3D" to="." method="_on_area_3d_body_exited"]
