@@ -4,4 +4,4 @@
 
 [resource]
 shader = ExtResource("1_yfsx4")
-shader_parameter/intenstity = null
+shader_parameter/intensity = null

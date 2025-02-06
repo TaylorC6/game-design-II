@@ -13,11 +13,16 @@ var KNOCKBACK = 16.0
 func take_damage(_dmg):
 	self.queue_free()
 
+func _ready() -> void:
+	nav_agent.target_position = global_position
 
 func _physics_process(delta: float) -> void:
 	for player in get_tree().get_nodes_in_group("Player"):
 		if $AttackRange.overlaps_body(player):
 			nav_agent.target_position = player.global_position
+		#else:
+			#nav_agent.target_position = self.global_position + \
+			#randi_range(Vector3(0, 0, 0), Vector3(25, 25, 25))
 		if atk_area.overlaps_body(player):
 			player.take_damage(ATTACK)
 			player.inertia = (player.global_position-self.global_position) \

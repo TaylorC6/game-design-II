@@ -68,6 +68,8 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	if not is_on_floor() and Input.is_action_pressed("gravity"):
+		velocity += -get_gravity() * delta * 2
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
@@ -104,6 +106,9 @@ func _physics_process(delta: float) -> void:
 	HUD.healthbar.value = int(HEALTH)
 	if damage_lock == 0.0:
 		HUD.dmg_overlay.material = null
+	
+	if self.global_position.y <= -50:
+		take_damage(MAX_HEALTH)
 	
 	move_and_slide()
 
