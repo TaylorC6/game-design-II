@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://1gkpwy53fp1o"]
+[gd_scene load_steps=55 format=3 uid="uid://1gkpwy53fp1o"]
 
 [ext_resource type="PackedScene" uid="uid://bmev31udwolly" path="res://Practice/elevator.tscn" id="1_4pf2i"]
 [ext_resource type="PackedScene" uid="uid://b4migi0ol3kpg" path="res://Practice/player_3d.tscn" id="1_wb6nm"]
@@ -26,6 +26,8 @@
 [ext_resource type="PackedScene" uid="uid://dspqud0k3la54" path="res://Practice/playerhud_3d.tscn" id="24_0548t"]
 [ext_resource type="PackedScene" uid="uid://d1lgx274v4w8s" path="res://Practice/enemy_3d.tscn" id="24_pvq1n"]
 [ext_resource type="PackedScene" uid="uid://584y4wd671tb" path="res://Practice/goal.tscn" id="25_cjott"]
+[ext_resource type="PackedScene" uid="uid://ccn27cu6jbgq3" path="res://Practice/kick_ball.tscn" id="27_i168d"]
+[ext_resource type="PackedScene" uid="uid://cqwoc0ywsn83o" path="res://Practice/push_block.tscn" id="28_qxmcp"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fbsoe"]
 panorama = ExtResource("1_wbvbq")
@@ -272,3 +274,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.5979, -4.07248, -37.4644)
 
 [node name="enemy3d8" parent="." instance=ExtResource("24_pvq1n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7298, 1.32574, 36.2227)
+
+[node name="KickBall" parent="." instance=ExtResource("27_i168d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.66616, 6.45397, -9.58501)
+
+[node name="PushBlock" parent="." instance=ExtResource("28_qxmcp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4532, 7.56975, -9.5828)
