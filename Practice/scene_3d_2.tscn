@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://clj1skp6en0ew"]
+[gd_scene load_steps=25 format=3 uid="uid://clj1skp6en0ew"]
 
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_018yu"]
 [ext_resource type="Resource" path="res://Practice/assets/terrains/scene_3d_2/data.hterrain" id="2_khhyx"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c08dt67gqaj0b" path="res://Practice/assets/textures/Metal061B_1K-JPG/Metal061B_1K-JPG_NormalGL.jpg" id="9_j1i1o"]
 [ext_resource type="Texture2D" uid="uid://cv3d1mc06qmxr" path="res://Practice/assets/textures/PavingStones138_1K-JPG/PavingStones138_1K-JPG_NormalGL.jpg" id="10_peg6r"]
 [ext_resource type="Texture2D" uid="uid://b0k1wtxgqqktx" path="res://Practice/assets/textures/Wood066_1K-JPG/Wood066_1K-JPG_NormalGL.jpg" id="11_rd2aq"]
+[ext_resource type="PackedScene" uid="uid://d1lgx274v4w8s" path="res://Practice/enemy_3d.tscn" id="14_r3yr1"]
 [ext_resource type="PackedScene" uid="uid://584y4wd671tb" path="res://Practice/goal.tscn" id="14_tp1ws"]
 [ext_resource type="PackedScene" uid="uid://bmev31udwolly" path="res://Practice/elevator.tscn" id="15_4byk6"]
 
@@ -400,8 +401,39 @@ material_override = SubResource("StandardMaterial3D_0rkbk")
 use_collision = true
 size = Vector3(2.67432, 1, 2.81726)
 
+[node name="enemy3d" parent="." instance=ExtResource("14_r3yr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.023, 15.93, -40.6536)
+
+[node name="enemy3d9" parent="." instance=ExtResource("14_r3yr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.167415, 13.9894, -43.4155)
+
+[node name="enemy3d10" parent="." instance=ExtResource("14_r3yr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.202279, 13.9894, -2.08184)
+
+[node name="enemy3d8" parent="." instance=ExtResource("14_r3yr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6646, 15.93, -4.54245)
+
+[node name="enemy3d2" parent="." instance=ExtResource("14_r3yr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.1157, 18.9935, -28.1865)
+
+[node name="enemy3d7" parent="." instance=ExtResource("14_r3yr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5558, 18.9935, -17.3134)
+
+[node name="enemy3d3" parent="." instance=ExtResource("14_r3yr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7625, 21.971, -12.2987)
+
+[node name="enemy3d6" parent="." instance=ExtResource("14_r3yr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1753, 21.971, -32.8702)
+
+[node name="enemy3d4" parent="." instance=ExtResource("14_r3yr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.363997, 25.919, -1.89874)
+
+[node name="enemy3d5" parent="." instance=ExtResource("14_r3yr1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.363997, 25.919, -43.4413)
+
 [node name="Goal" parent="." instance=ExtResource("14_tp1ws")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.245803, 46.3852, -23.9264)
+next_level = "scene_3d_3"
 
 [node name="Elevator" parent="." instance=ExtResource("15_4byk6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.978203, 24.8371, -23.9264)

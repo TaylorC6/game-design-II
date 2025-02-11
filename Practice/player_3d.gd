@@ -29,9 +29,13 @@ var damage_lock = 0.0
 @onready var HUD = get_tree().get_first_node_in_group("HUD")
 var damage_shader = preload("res://Practice/assets/shaders/take_damage.tres")
 
+@onready var model: Node3D = $gobot
+@onready var animator: AnimationPlayer = $gobot/AnimationPlayer
+
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
+	model.visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and \
@@ -82,10 +86,14 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		# TODO: walk/run animation
+		if SPEED == WALK_SPEED:
+			animator.play("Walk")
+		else:
+			animator.play("Run")
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
+		animator.play("Idle")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
@@ -141,7 +149,6 @@ func toggle_camera_parent():
 	var parent = "Head"
 	if first_person:
 		parent = "SpringArm3D"
-		# TODO: model visible
 	var child = camera
 	child.get_parent().remove_child(child)
 	get_node(parent).add_child(child)
@@ -150,6 +157,7 @@ func toggle_camera_parent():
 		camera.position = camera_pos
 		# TODO: model invisible
 	first_person = not first_person
+	model.visible = not first_person
 
 
 func headbob(time):
