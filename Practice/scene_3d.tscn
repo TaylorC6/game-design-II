@@ -1,6 +1,5 @@
-[gd_scene load_steps=55 format=3 uid="uid://1gkpwy53fp1o"]
+[gd_scene load_steps=53 format=3 uid="uid://1gkpwy53fp1o"]
 
-[ext_resource type="PackedScene" uid="uid://bmev31udwolly" path="res://Practice/elevator.tscn" id="1_4pf2i"]
 [ext_resource type="PackedScene" uid="uid://b4migi0ol3kpg" path="res://Practice/player_3d.tscn" id="1_wb6nm"]
 [ext_resource type="Texture2D" uid="uid://cisid38qlqjtu" path="res://Practice/assets/textures/MorningSkyHDRI007A_4K-TONEMAPPED.jpg" id="1_wbvbq"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_anybl"]
@@ -24,10 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://cuktirupu4rp8" path="res://Practice/assets/textures/Rock051_1K-JPG/Rock051_1K-JPG_NormalGL.jpg" id="12_ps8nk"]
 [ext_resource type="Texture2D" uid="uid://b5d7pdjsvhhl3" path="res://Practice/assets/textures/Metal048B_1K-JPG/Metal048B_1K-JPG_NormalGL.jpg" id="13_4r4qb"]
 [ext_resource type="PackedScene" uid="uid://dspqud0k3la54" path="res://Practice/playerhud_3d.tscn" id="24_0548t"]
+[ext_resource type="PackedScene" uid="uid://d2t8lnc1kbifx" path="res://Practice/portal_rocks.tscn" id="24_a34a6"]
 [ext_resource type="PackedScene" uid="uid://d1lgx274v4w8s" path="res://Practice/enemy_3d.tscn" id="24_pvq1n"]
 [ext_resource type="PackedScene" uid="uid://584y4wd671tb" path="res://Practice/goal.tscn" id="25_cjott"]
-[ext_resource type="PackedScene" uid="uid://ccn27cu6jbgq3" path="res://Practice/kick_ball.tscn" id="27_i168d"]
-[ext_resource type="PackedScene" uid="uid://cqwoc0ywsn83o" path="res://Practice/push_block.tscn" id="28_qxmcp"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_fbsoe"]
 panorama = ExtResource("1_wbvbq")
@@ -213,9 +211,6 @@ polygon = PackedVector2Array(0, 0, -2.02823, 1.08276, 5.01788, 1.08677, 2.85812,
 depth = 8.12
 material = SubResource("StandardMaterial3D_5onpj")
 
-[node name="Elevator" parent="." instance=ExtResource("1_4pf2i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.09753, 32.3263, -36.2473)
-
 [node name="HTerrain" type="Node3D" parent="."]
 script = ExtResource("2_anybl")
 centered = true
@@ -240,8 +235,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.7766, 0)
 
 [node name="playerhud_3d" parent="." instance=ExtResource("24_0548t")]
 
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("24_a34a6")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1.07803, 49.235, -34.9479)
+
 [node name="Goal" parent="." instance=ExtResource("25_cjott")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.858431, 58.9171, -34.7014)
+transform = Transform3D(3.095, 0, 0, 0, 0.155, 0, 0, 0, 3.095, -0.858431, 50.9422, -34.7014)
 next_level = "scene_3d_2"
 
 [node name="enemy3d" parent="." instance=ExtResource("24_pvq1n")]
@@ -274,9 +272,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.5979, -4.07248, -37.4644)
 
 [node name="enemy3d8" parent="." instance=ExtResource("24_pvq1n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.7298, 1.32574, 36.2227)
-
-[node name="KickBall" parent="." instance=ExtResource("27_i168d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.66616, 6.45397, -9.58501)
-
-[node name="PushBlock" parent="." instance=ExtResource("28_qxmcp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4532, 7.56975, -9.5828)
