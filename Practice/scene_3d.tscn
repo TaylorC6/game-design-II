@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://cuktirupu4rp8" path="res://Practice/assets/textures/Rock051_1K-JPG/Rock051_1K-JPG_NormalGL.jpg" id="12_ps8nk"]
 [ext_resource type="Texture2D" uid="uid://b5d7pdjsvhhl3" path="res://Practice/assets/textures/Metal048B_1K-JPG/Metal048B_1K-JPG_NormalGL.jpg" id="13_4r4qb"]
 [ext_resource type="PackedScene" uid="uid://dspqud0k3la54" path="res://Practice/playerhud_3d.tscn" id="24_0548t"]
-[ext_resource type="PackedScene" uid="uid://d2t8lnc1kbifx" path="res://Practice/portal_rocks.tscn" id="24_a34a6"]
+[ext_resource type="PackedScene" uid="uid://bx0poivmn6sak" path="res://Practice/assets/models/portalvator.tscn" id="24_a34a6"]
 [ext_resource type="PackedScene" uid="uid://d1lgx274v4w8s" path="res://Practice/enemy_3d.tscn" id="24_pvq1n"]
 [ext_resource type="PackedScene" uid="uid://584y4wd671tb" path="res://Practice/goal.tscn" id="25_cjott"]
 
@@ -236,10 +236,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.7766, 0)
 [node name="playerhud_3d" parent="." instance=ExtResource("24_0548t")]
 
 [node name="Sketchfab_Scene" parent="." instance=ExtResource("24_a34a6")]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, -1.07803, 49.235, -34.9479)
+transform = Transform3D(0.011, 0, 0, 0, 0.011, 0, 0, 0, 0.011, -0.96, 59.626, -34.892)
 
 [node name="Goal" parent="." instance=ExtResource("25_cjott")]
-transform = Transform3D(3.095, 0, 0, 0, 0.155, 0, 0, 0, 3.095, -0.858431, 50.9422, -34.7014)
+transform = Transform3D(3.095, 0, 0, 0, 3.095, 0, 0, 0, 3.095, -0.858431, 75.7469, -34.7014)
 next_level = "scene_3d_2"
 
 [node name="enemy3d" parent="." instance=ExtResource("24_pvq1n")]

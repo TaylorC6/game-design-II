@@ -14,5 +14,6 @@ func _process(delta: float) -> void:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body == $KickBall:
-		
-		$CSGPolygon3D3.queue_free()
+		if $CSGPolygon3D3 != null:
+			$CSGPolygon3D3.queue_free()
+		return
