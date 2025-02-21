@@ -1,12 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://b4migi0ol3kpg"]
+[gd_scene load_steps=8 format=3 uid="uid://b4migi0ol3kpg"]
 
 [ext_resource type="Script" path="res://Practice/player_3d.gd" id="1_jsqo1"]
 [ext_resource type="PackedScene" uid="uid://cbvsatibxhrqf" path="res://Practice/assets/models/gobot.glb" id="2_3v2ou"]
+[ext_resource type="PackedScene" uid="uid://drm1c7yehu8ur" path="res://Practice/assets/models/mixamo/joe.gltf" id="2_n7ssa"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_h1ouo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g34d2"]
-albedo_color = Color(0.211765, 0.466667, 1, 1)
+albedo_color = Color(0.211765, 0.466667, 1, 0.309804)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tghps"]
 height = 1.59531
@@ -30,8 +31,11 @@ shape = SubResource("CapsuleShape3D_tghps")
 transform = Transform3D(1, 0, 0, 0, 0.994522, 0.104528, 0, -0.104528, 0.994522, 0, 0.6, 0)
 spring_length = 6.0
 
+[node name="AuxScene" parent="." instance=ExtResource("2_n7ssa")]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 0, 0.0619647, 0)
+
 [node name="Head" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.271656, 0)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.690213, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 current = true
@@ -39,6 +43,7 @@ fov = 90.0
 
 [node name="gobot" parent="." instance=ExtResource("2_3v2ou")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, -0.688237, 0)
+visible = false
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="gobot"]
 root_node = NodePath("../..")

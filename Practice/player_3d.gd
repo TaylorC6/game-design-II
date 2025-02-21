@@ -29,13 +29,15 @@ var damage_lock = 0.0
 @onready var HUD = get_tree().get_first_node_in_group("HUD")
 var damage_shader = preload("res://Practice/assets/shaders/take_damage.tres")
 
+@onready var modelJoe: Node3D = $AuxScene
+@onready var animatorJoe: AnimationPlayer = $AuxScene/AnimationPlayer
 @onready var model: Node3D = $gobot
 @onready var animator: AnimationPlayer = $gobot/AnimationPlayer
 
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	model.visible = false
+	modelJoe.visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion and \
@@ -80,6 +82,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		animatorJoe.play("Jump0")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -87,13 +90,16 @@ func _physics_process(delta: float) -> void:
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		if SPEED == WALK_SPEED:
-			animator.play("Walk")
+			if direction > Vector3(0,0,0):
+				animatorJoe.play("Walking(1)0")
+			else:
+				animatorJoe.play("WalkingBackwards0")
 		else:
-			animator.play("Run")
+			animatorJoe.play("Running0")
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
 	else:
-		animator.play("Idle")
+		animatorJoe.play("Idle(1)0")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
@@ -157,7 +163,7 @@ func toggle_camera_parent():
 		camera.position = camera_pos
 		# TODO: model invisible
 	first_person = not first_person
-	model.visible = not first_person
+	modelJoe.visible = not first_person
 
 
 func headbob(time):
