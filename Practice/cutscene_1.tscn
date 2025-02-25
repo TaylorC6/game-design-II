@@ -1,0 +1,233 @@
+[gd_scene load_steps=8 format=3 uid="uid://8ww2wp527m88"]
+
+[ext_resource type="Script" path="res://Practice/cutscene_1.gd" id="1_7my23"]
+[ext_resource type="PackedScene" uid="uid://cvb5kbn38sl3m" path="res://Practice/assets/cutscenes/scene1/city_scene_tokyo.glb" id="1_o8frq"]
+[ext_resource type="PackedScene" uid="uid://dhk8sdfb30cmi" path="res://Practice/assets/cutscenes/scene1/char_with_anim.glb" id="2_ok6xx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_b48xi"]
+radius = 0.135
+height = 0.69
+
+[sub_resource type="Animation" id="Animation_iby68"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(2.74761, 4.5949, 9.52898)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.368042, -0.691154, 0.0066837)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.567044, 0.443715, 1.29835)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CharacterBody3D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_glxr8"]
+resource_name = "cutscene1"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.9, 6.4, 11, 12.3667, 14, 19.3, 21.1667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(2.74761, 4.5949, 9.52898), Vector3(19.6552, 9.98081, 10.596), Vector3(17.1037, 6.42976, 0.409889), Vector3(4.31604, 3.36261, -4.86696), Vector3(1.95696, 3.36261, -1.53742), Vector3(1.75356, 2.61887, 2.33257), Vector3(-1.85065, 1.23677, 1.80521), Vector3(0.422882, 1.98861, 3.10899)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.86667, 6.46667, 11, 12.3667, 14.0333, 19.2667, 21.1667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.368042, -0.691154, 0.0066837), Vector3(-0.368042, 0.82007, 0.00668372), Vector3(-0.36661, 1.61307, 0.00675178), Vector3(-0.000395992, 2.42204, 0.025389), Vector3(-0.261528, 3.06852, 0.0442863), Vector3(-0.261528, 2.02132, 0.0442863), Vector3(-0.368042, -1.38539, 0.00668374), Vector3(-0.559242, -0.0841048, 0.0238487)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CharacterBody3D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(19.2667, 20.4333, 22.1333, 24.6333, 25.9667, 27, 28.1333, 29.7667, 29.9667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0.567044, 0.443715, 1.29835), Vector3(0.567, 0.489, 1.518), Vector3(0.327, 0.579, 1.646), Vector3(0.135, 0.684, 1.646), Vector3(0.135, 0.809, 1.646), Vector3(0.135, 0.854, 1.646), Vector3(0.135, 0.969, 1.646), Vector3(0.135, 0.429, 1.517), Vector3(0.135, 1.159, 1.517)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CharacterBody3D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(19.3, 20.5, 22.1333, 24.6333, 25.9667, 27.0667, 28.1333, 29.7667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0.191986, 0), Vector3(0, 0.111561, 0), Vector3(0, 0.164061, 0), Vector3(0, 0.111701, 0), Vector3(0, 0.164061, 0), Vector3(0, 0.00698132, 0), Vector3(0, 0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CharacterBody3D:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(19.3333, 20.5, 22.1333, 24.6333, 25.9667, 27.0667, 28.1333, 29.8333, 29.9667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.175, 1.175, 1.175), Vector3(1.49, 1.49, 1.49), Vector3(1.8, 1.8, 1.8), Vector3(2.085, 2.085, 2.085), Vector3(2.235, 2.235, 2.235), Vector3(2.585, 2.585, 2.585), Vector3(1, 1, 1), Vector3(1.72, 1.72, 1.72)]
+}
+tracks/5/type = "animation"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CharacterBody3D/AuxScene/AnimationPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": PackedStringArray("[stop]", "SambaDancing"),
+"times": PackedFloat32Array(10.9, 12.3)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pvg8m"]
+_data = {
+"RESET": SubResource("Animation_iby68"),
+"cutscene1": SubResource("Animation_glxr8")
+}
+
+[node name="cutscene1" type="Node3D"]
+script = ExtResource("1_7my23")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_o8frq")]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.567044, 0.443715, 1.29835)
+
+[node name="AuxScene" parent="CharacterBody3D" instance=ExtResource("2_ok6xx")]
+transform = Transform3D(0.004, 0, 0, 0, 0.004, 0, 0, 0, 0.004, 0, 0, 0)
+
+[node name="Skeleton3D" parent="CharacterBody3D/AuxScene/Node" index="0"]
+bones/0/position = Vector3(17.1134, 88.8092, -9.72098)
+bones/0/rotation = Quaternion(-0.034517, -0.713315, -0.000976467, 0.699993)
+bones/2/rotation = Quaternion(0.0317985, 0.166407, 0.181593, 0.96867)
+bones/4/rotation = Quaternion(0.0010569, 0.0284253, -0.0323145, 0.999073)
+bones/6/rotation = Quaternion(0.0558942, 0.0262382, -0.0332548, 0.997538)
+bones/8/rotation = Quaternion(0.510827, 0.489996, -0.515125, 0.483329)
+bones/10/rotation = Quaternion(0.402958, 0.440587, 0.0940442, 0.796658)
+bones/12/rotation = Quaternion(1.19023e-06, -5.36674e-08, 0.48632, 0.873781)
+bones/14/rotation = Quaternion(-0.22332, -0.00569158, 0.078218, 0.971585)
+bones/16/rotation = Quaternion(0.0302375, 0.0812347, 0.165542, 0.982386)
+bones/18/rotation = Quaternion(0.0105478, -0.011945, -0.112781, 0.993492)
+bones/20/rotation = Quaternion(-0.0210715, -0.00745092, -0.0391349, 0.998984)
+bones/24/rotation = Quaternion(-0.0236763, -9.31323e-10, 0.00285021, 0.999716)
+bones/26/rotation = Quaternion(0.0315427, 1.04774e-08, -0.0037979, 0.999495)
+bones/28/rotation = Quaternion(0.0575383, -3.00863e-08, -0.00692796, 0.998319)
+bones/32/rotation = Quaternion(-0.0553186, 3.49246e-08, 0.00666013, 0.998447)
+bones/34/rotation = Quaternion(0.000278783, -3.43425e-09, -3.40776e-05, 1)
+bones/36/rotation = Quaternion(0.0284448, -4.51008e-10, -0.00342513, 0.99959)
+bones/40/rotation = Quaternion(0.0157646, 2.23517e-08, -0.00189784, 0.999874)
+bones/42/rotation = Quaternion(0.0731844, -2.98023e-08, -0.00881176, 0.99728)
+bones/44/rotation = Quaternion(0.0932068, 6.09422e-09, -0.0112226, 0.995584)
+bones/48/rotation = Quaternion(0.0430371, 0.00170577, -0.0410496, 0.998228)
+bones/50/rotation = Quaternion(0.110323, 0.0038055, 0.0224209, 0.993636)
+bones/52/rotation = Quaternion(0.121233, 7.01834e-08, -0.0145965, 0.992517)
+bones/56/rotation = Quaternion(-0.0443836, -0.0375759, -0.106613, 0.992599)
+bones/58/rotation = Quaternion(-0.0933743, -0.29844, -0.0756576, 0.946832)
+bones/66/rotation = Quaternion(0.552843, -0.459163, 0.483645, 0.499621)
+bones/68/rotation = Quaternion(0.19211, 0.469615, -0.198543, 0.838532)
+bones/70/rotation = Quaternion(1.57207e-06, 9.31323e-09, -0.658375, 0.75269)
+bones/72/rotation = Quaternion(-0.318574, -0.127155, -0.154684, 0.926507)
+bones/74/rotation = Quaternion(0.0154906, -0.119101, -0.289762, 0.949533)
+bones/76/rotation = Quaternion(0.0167782, 0.00705625, 0.105065, 0.994299)
+bones/78/rotation = Quaternion(-0.0220065, 0.0216666, 0.0657882, 0.997356)
+bones/82/rotation = Quaternion(-0.0259911, -5.20959e-09, -0.00315851, 0.999657)
+bones/84/rotation = Quaternion(0.0793322, -4.17349e-08, 0.00964196, 0.996802)
+bones/86/rotation = Quaternion(0.143122, 3.85352e-08, 0.0173949, 0.989552)
+bones/90/rotation = Quaternion(0.0648643, -3.37604e-09, 0.00788373, 0.997863)
+bones/92/rotation = Quaternion(0.145864, -5.21541e-08, 0.0177282, 0.989146)
+bones/94/rotation = Quaternion(0.185611, -7.37561e-08, 0.0225585, 0.982364)
+bones/98/rotation = Quaternion(0.17737, -1.20141e-07, 0.021557, 0.983908)
+bones/100/rotation = Quaternion(0.229206, 5.96046e-08, 0.0278573, 0.972979)
+bones/102/rotation = Quaternion(0.237505, 4.74317e-08, 0.0288662, 0.970957)
+bones/106/rotation = Quaternion(0.267498, -1.49012e-08, 0.0325117, 0.96301)
+bones/108/rotation = Quaternion(0.292413, -8.56817e-08, 0.035539, 0.955632)
+bones/110/rotation = Quaternion(0.278355, -4.10993e-09, 0.0338309, 0.959882)
+bones/114/rotation = Quaternion(-0.0422716, 0.0848638, 0.994789, -0.0374987)
+bones/116/rotation = Quaternion(-0.354936, 0.0694548, -0.0208582, 0.932074)
+bones/118/rotation = Quaternion(0.631292, 0.0365022, -0.0593936, 0.772406)
+bones/120/rotation = Quaternion(0.360204, 0.0171587, 0.0054269, 0.9327)
+bones/124/rotation = Quaternion(0.00869647, 0.146655, 0.968551, 0.200815)
+bones/126/rotation = Quaternion(-0.2104, 0.0709458, -0.0318141, 0.974519)
+bones/128/rotation = Quaternion(0.434886, 0.116357, 0.173408, 0.875936)
+bones/130/rotation = Quaternion(0.396093, -0.0196483, -0.00564854, 0.917983)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_b48xi")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.772027, 0.224184, -0.594741, 0.00623607, 0.933013, 0.359789, 0.63556, -0.281476, 0.718913, 2.74761, 4.5949, 9.52898)
+current = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_pvg8m")
+}
+autoplay = "cutscene1"
+
+[editable path="CharacterBody3D/AuxScene"]

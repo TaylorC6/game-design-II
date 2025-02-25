@@ -25,6 +25,7 @@ var inertia = Vector3.ZERO
 var MAX_HEALTH = 50
 var HEALTH = MAX_HEALTH
 var damage_lock = 0.0
+var jump = false
 
 @onready var HUD = get_tree().get_first_node_in_group("HUD")
 var damage_shader = preload("res://Practice/assets/shaders/take_damage.tres")
@@ -82,7 +83,10 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jump = true
+	if jump:
 		animatorJoe.play("Jump0")
+		jump = false
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -148,6 +152,7 @@ func take_damage(dmg):
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			OS.alert("You died!")
 			get_tree().reload_current_scene()
+			
 	pass
 
 
