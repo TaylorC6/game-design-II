@@ -1,4 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://2pc0s2nt0w4d"]
+[gd_scene load_steps=7 format=3 uid="uid://2pc0s2nt0w4d"]
+
+[ext_resource type="PackedScene" uid="uid://ccqsmk23gncxi" path="res://Practice/assets/cutscenes/scene2/low_poly_ufo_scene.glb" id="1_d5j6e"]
+[ext_resource type="PackedScene" uid="uid://bf3h3w8r1sx05" path="res://Practice/assets/cutscenes/scene2/cac-1741101682541.gltf" id="2_devad"]
+[ext_resource type="PackedScene" uid="uid://byx3qsbqywihh" path="res://Practice/assets/cutscenes/scene2/cac-1741101643177.gltf" id="3_40vph"]
 
 [sub_resource type="Animation" id="Animation_w27ul"]
 resource_name = "scene2"
@@ -7,13 +11,40 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 2.03333, 5.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.08498, 2.67365, 0.794616), Vector3(3.06661, 1.56802, 3.99624), Vector3(-1.83512, 5.99549, 7.72681), Vector3(-3.814, 5.99549, 7.42747)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 5.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.626214, -0.611599, -0.0580854), Vector3(-0.0521324, -1.93824, -0.00724126), Vector3(-0.567633, -0.627864, -0.0167299)]
+}
+
+[sub_resource type="Animation" id="Animation_s20y6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": []
+"values": [Vector3(3.08498, 2.67365, 0.794616)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -22,24 +53,34 @@ tracks/1/path = NodePath("Camera3D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": []
+"values": [Vector3(-0.626214, -0.611599, -0.0580854)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x6xlk"]
 _data = {
+"RESET": SubResource("Animation_s20y6"),
 "scene2": SubResource("Animation_w27ul")
 }
 
 [node name="cutscene2" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1.87827, 4.31622)
+transform = Transform3D(0.797814, 0.383477, -0.465229, -0.0470374, 0.808886, 0.586081, 0.601066, -0.445701, 0.663378, 3.08498, 2.67365, 0.794616)
 current = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_x6xlk")
 }
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_d5j6e")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="AuxScene" parent="." instance=ExtResource("2_devad")]
+transform = Transform3D(-0.00707126, -0.0132026, 0.00082934, 0.000197104, 0.000835132, 0.0149754, -0.0132272, 0.00707058, -0.000220208, -1.47035, -0.212035, 0.0210373)
+
+[node name="AuxScene2" parent="." instance=ExtResource("3_40vph")]
+transform = Transform3D(0.000963222, 0, -0.0119613, 0, 0.012, 0, 0.0119613, 0, 0.000963222, 5.34192, 1.046, 4.83151)
