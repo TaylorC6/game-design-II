@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://2pc0s2nt0w4d"]
 
 [ext_resource type="PackedScene" uid="uid://ccqsmk23gncxi" path="res://Practice/assets/cutscenes/scene2/low_poly_ufo_scene.glb" id="1_d5j6e"]
-[ext_resource type="Script" path="res://Practice/assets/cutscenes/scene2/cutscene_2.gd" id="1_u0uar"]
+[ext_resource type="Script" uid="uid://7gd5gf8h2am" path="res://Practice/assets/cutscenes/scene2/cutscene_2.gd" id="1_u0uar"]
 [ext_resource type="PackedScene" uid="uid://bbfennydtug26" path="res://Practice/assets/cutscenes/scene2/cac-1741359322138.gltf" id="2_6r2m8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q0gx6"]
@@ -133,8 +133,8 @@ tracks/4/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x6xlk"]
 _data = {
-"RESET": SubResource("Animation_s20y6"),
-"scene2": SubResource("Animation_w27ul")
+&"RESET": SubResource("Animation_s20y6"),
+&"scene2": SubResource("Animation_w27ul")
 }
 
 [node name="cutscene2" type="Node3D"]
@@ -154,7 +154,7 @@ current = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_x6xlk")
+&"": SubResource("AnimationLibrary_x6xlk")
 }
 autoplay = "scene2"
 

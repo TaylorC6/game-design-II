@@ -1,9 +1,9 @@
 [gd_scene load_steps=26 format=3 uid="uid://dghgtmxuj8qwi"]
 
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_ctuio"]
-[ext_resource type="Script" path="res://Practice/scene_3d_3.gd" id="1_n84uw"]
-[ext_resource type="Resource" path="res://Practice/assets/terrains/data.hterrain" id="2_oxlbn"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_6j7ep"]
+[ext_resource type="Script" uid="uid://b8sugqrxe8pxj" path="res://addons/zylann.hterrain/hterrain.gd" id="1_ctuio"]
+[ext_resource type="Script" uid="uid://bpjyqux2t4sip" path="res://Practice/scene_3d_3.gd" id="1_n84uw"]
+[ext_resource type="Resource" uid="uid://d160rltk2wdva" path="res://Practice/assets/terrains/data.hterrain" id="2_oxlbn"]
+[ext_resource type="Script" uid="uid://5pi5wlau3xgi" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_6j7ep"]
 [ext_resource type="Texture2D" uid="uid://c4g5fd5coatkt" path="res://Practice/assets/textures/Asphalt031_1K-JPG/Asphalt031_1K-JPG_Color.jpg" id="4_wwr8c"]
 [ext_resource type="Texture2D" uid="uid://d04e1lksstm11" path="res://Practice/assets/textures/Bricks075A_1K-JPG/Bricks075A_1K-JPG_Color.jpg" id="5_cygs2"]
 [ext_resource type="Texture2D" uid="uid://dp1hs43bhpjrh" path="res://Practice/assets/textures/Ground078_1K-JPG/Ground078_1K-JPG_Color.jpg" id="6_lxphc"]

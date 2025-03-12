@@ -1,8 +1,8 @@
 [gd_scene load_steps=25 format=3 uid="uid://clj1skp6en0ew"]
 
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_018yu"]
-[ext_resource type="Resource" path="res://Practice/assets/terrains/scene_3d_2/data.hterrain" id="2_khhyx"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_ljpfp"]
+[ext_resource type="Script" uid="uid://b8sugqrxe8pxj" path="res://addons/zylann.hterrain/hterrain.gd" id="1_018yu"]
+[ext_resource type="Resource" uid="uid://c4l2npgo2xddh" path="res://Practice/assets/terrains/scene_3d_2/data.hterrain" id="2_khhyx"]
+[ext_resource type="Script" uid="uid://5pi5wlau3xgi" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_ljpfp"]
 [ext_resource type="PackedScene" uid="uid://b4migi0ol3kpg" path="res://Practice/player_3d.tscn" id="4_58v22"]
 [ext_resource type="Texture2D" uid="uid://c2ov56xto6ho" path="res://Practice/assets/textures/Ground068_1K-JPG/Ground068_1K-JPG_Color.jpg" id="4_xw2ua"]
 [ext_resource type="PackedScene" uid="uid://dspqud0k3la54" path="res://Practice/playerhud_3d.tscn" id="5_66exn"]

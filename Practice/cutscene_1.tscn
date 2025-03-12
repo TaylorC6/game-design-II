@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://8ww2wp527m88"]
 
-[ext_resource type="Script" path="res://Practice/cutscene_1.gd" id="1_7my23"]
+[ext_resource type="Script" uid="uid://digiufn20i83s" path="res://Practice/cutscene_1.gd" id="1_7my23"]
 [ext_resource type="PackedScene" uid="uid://cvb5kbn38sl3m" path="res://Practice/assets/cutscenes/scene1/city_scene_tokyo.glb" id="1_o8frq"]
 [ext_resource type="PackedScene" uid="uid://dhk8sdfb30cmi" path="res://Practice/assets/cutscenes/scene1/char_with_anim.glb" id="2_ok6xx"]
 
@@ -147,8 +147,8 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pvg8m"]
 _data = {
-"RESET": SubResource("Animation_iby68"),
-"cutscene1": SubResource("Animation_glxr8")
+&"RESET": SubResource("Animation_iby68"),
+&"cutscene1": SubResource("Animation_glxr8")
 }
 
 [node name="cutscene1" type="Node3D"]
@@ -226,7 +226,7 @@ current = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_pvg8m")
+&"": SubResource("AnimationLibrary_pvg8m")
 }
 autoplay = "cutscene1"
 

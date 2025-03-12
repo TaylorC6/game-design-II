@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://d1lgx274v4w8s"]
 
-[ext_resource type="Script" path="res://Practice/enemy_3d.gd" id="1_30vgh"]
+[ext_resource type="Script" uid="uid://dmkevjuci70pd" path="res://Practice/enemy_3d.gd" id="1_30vgh"]
 [ext_resource type="PackedScene" uid="uid://bqunbtp7hujxs" path="res://Practice/assets/models/mixamo/cac-1739978565745.gltf" id="2_pbjut"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qowxv"]

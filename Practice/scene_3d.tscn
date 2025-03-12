@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://b4migi0ol3kpg" path="res://Practice/player_3d.tscn" id="1_wb6nm"]
 [ext_resource type="Texture2D" uid="uid://cisid38qlqjtu" path="res://Practice/assets/textures/MorningSkyHDRI007A_4K-TONEMAPPED.jpg" id="1_wbvbq"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_anybl"]
+[ext_resource type="Script" uid="uid://b8sugqrxe8pxj" path="res://addons/zylann.hterrain/hterrain.gd" id="2_anybl"]
 [ext_resource type="Texture2D" uid="uid://uhtg6h11lfpo" path="res://Practice/assets/textures/Concrete034_1K-JPG/Concrete034_1K-JPG_Color.jpg" id="2_cs7gq"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_ehnbr"]
-[ext_resource type="Resource" path="res://Practice/assets/terrains/scene_3d/data.hterrain" id="3_tq83y"]
+[ext_resource type="Script" uid="uid://5pi5wlau3xgi" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_ehnbr"]
+[ext_resource type="Resource" uid="uid://djs7y5bfv26ue" path="res://Practice/assets/terrains/scene_3d/data.hterrain" id="3_tq83y"]
 [ext_resource type="Texture2D" uid="uid://b54jwb04u3cpt" path="res://Practice/assets/textures/Concrete034_1K-JPG/Concrete034_1K-JPG_Roughness.jpg" id="3_y506n"]
 [ext_resource type="Texture2D" uid="uid://dexpcascf72kd" path="res://Practice/assets/textures/Asphalt031_1K-JPG/Asphalt031_1K-JPG_Roughness.jpg" id="4_qk1g8"]
 [ext_resource type="Texture2D" uid="uid://dsmthnvhdivh1" path="res://Practice/assets/textures/Marble012_1K-JPG/Marble012_1K-JPG_Displacement.jpg" id="5_dk0de"]
