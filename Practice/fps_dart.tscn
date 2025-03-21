@@ -28,4 +28,9 @@ shape = SubResource("CylinderShape3D_xeh5g")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+volume_db = -15.0
+autoplay = true
+doppler_tracking = 2
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
