@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwiiwrl6ffl62"]
+
+[ext_resource type="PackedScene" uid="uid://8scsllo3hhsl" path="res://Practice/fps/lethal_company_offense_map.glb" id="1_dk0t6"]
+[ext_resource type="PackedScene" uid="uid://d2hv3elprw2ee" path="res://Practice/fps/fps_player_template.tscn" id="2_p27l6"]
+[ext_resource type="PackedScene" uid="uid://c1i4665nmhwax" path="res://Practice/fps/fps_enemy_template.tscn" id="3_knebu"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_knebu"]
+sky_top_color = Color(0.486792, 0.437695, 0.390175, 1)
+sky_horizon_color = Color(0.835591, 0.703415, 0.716472, 1)
+ground_bottom_color = Color(0.601906, 0.122298, 0.22205, 1)
+ground_horizon_color = Color(0.835591, 0.703415, 0.716472, 1)
+
+[sub_resource type="Sky" id="Sky_j2130"]
+sky_material = SubResource("ProceduralSkyMaterial_knebu")
+
+[sub_resource type="Environment" id="Environment_xao0a"]
+background_mode = 2
+sky = SubResource("Sky_j2130")
+tonemap_mode = 2
+
+[node name="fpsmap3" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xao0a")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+light_color = Color(0.47451, 0.207843, 0.372549, 1)
+shadow_enabled = true
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_dk0t6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -71.71, -37.085, 93.73)
+
+[node name="Text_009_Baked" parent="Sketchfab_Scene/Sketchfab_model/Offense_fbx/RootNode" index="62"]
+visible = false
+
+[node name="Text_020_Baked" parent="Sketchfab_Scene/Sketchfab_model/Offense_fbx/RootNode" index="63"]
+visible = false
+
+[node name="fps_player" parent="." instance=ExtResource("2_p27l6")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.719427, -1.41815, 0)
+
+[node name="fps_enemy" parent="." instance=ExtResource("3_knebu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13.2606, -1.44339, 12.2626)
+
+[node name="fps_enemy2" parent="." instance=ExtResource("3_knebu")]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 8.75745, -1.23484, 19.6562)
+
+[node name="fps_enemy3" parent="." instance=ExtResource("3_knebu")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 17.9538, 5.54278, 30.3211)
+
+[node name="fps_enemy9" parent="." instance=ExtResource("3_knebu")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 13.0931, 3.55839, 31.3442)
+
+[node name="fps_enemy4" parent="." instance=ExtResource("3_knebu")]
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 38.1513, -1.83279, 34.2573)
+
+[node name="fps_enemy5" parent="." instance=ExtResource("3_knebu")]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 43.5701, 4.19297, 20.834)
+
+[node name="fps_enemy6" parent="." instance=ExtResource("3_knebu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 43.7261, -1.42851, 16.4595)
+
+[node name="fps_enemy8" parent="." instance=ExtResource("3_knebu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.734, -0.978242, 22.4962)
+
+[node name="fps_enemy7" parent="." instance=ExtResource("3_knebu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.7281, 2.5424, 8.06132)
+
+[editable path="Sketchfab_Scene"]

@@ -7,7 +7,7 @@ var NORMAL_SPEED = SPEED
 var WALK_SPEED = 4.0
 var JUMP_VELOCITY = 7.0
 
-var MAX_HEALTH = 100
+var MAX_HEALTH = 200
 var HEALTH = MAX_HEALTH
 var damage_lock = 0.0  # Prevent infinite damage
 var inertia = Vector3()

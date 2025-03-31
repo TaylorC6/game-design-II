@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://04q44yj733eq"
+path.s3tc="res://.godot/imported/lethal_company_offense_map_58.jpg-2906ee6b90ec8c8a24090b82defde4cf.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "bf5de5a970619ea78ff8e4d0fb1be56b"
+}
+
+[deps]
+
+source_file="res://Practice/fps/lethal_company_offense_map_58.jpg"
+dest_files=["res://.godot/imported/lethal_company_offense_map_58.jpg-2906ee6b90ec8c8a24090b82defde4cf.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

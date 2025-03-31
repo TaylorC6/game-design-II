@@ -66,11 +66,9 @@ mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
 [node name="Label" type="Label" parent="HUD"]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 29.0
-offset_right = 388.0
-offset_bottom = 102.0
+layout_mode = 1
+offset_right = 349.0
+offset_bottom = 73.0
 text = "Health: "
 label_settings = SubResource("LabelSettings_73gtg")
 
@@ -84,16 +82,22 @@ text = "100/100
 label_settings = SubResource("LabelSettings_73gtg")
 
 [node name="Label2" type="Label" parent="HUD"]
-layout_mode = 0
-offset_left = 915.0
-offset_top = 29.0
-offset_right = 1264.0
-offset_bottom = 102.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -349.0
+offset_bottom = 73.0
+grow_horizontal = 0
 text = "Ammo: "
 label_settings = SubResource("LabelSettings_73gtg")
+horizontal_alignment = 1
 
 [node name="lblAmmo" type="Label" parent="HUD/Label2"]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.43553
+anchor_right = 0.43553
 offset_left = -21.0
 offset_right = 188.0
 offset_bottom = 81.0
@@ -101,6 +105,7 @@ text = "0/0
 "
 label_settings = SubResource("LabelSettings_73gtg")
 horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Crosshair" type="Label" parent="HUD"]
 layout_mode = 1
