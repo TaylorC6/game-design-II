@@ -2393,6 +2393,7 @@ shape = SubResource("ConcavePolygonShape3D_m6ms4")
 
 [node name="fps_player" parent="." instance=ExtResource("2_ingd6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02382, 0.17778)
+next_level = "fpsmap2"
 
 [node name="fps_enemy" parent="." instance=ExtResource("3_koylc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.28075, -1.37673)

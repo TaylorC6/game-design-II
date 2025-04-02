@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c4e3vp3e125ak"]
+[gd_scene load_steps=16 format=3 uid="uid://c4e3vp3e125ak"]
 
 [ext_resource type="PackedScene" uid="uid://d0i8f6u1ll80m" path="res://Practice/fps/fps_shooter_game_arena_map_v3.glb" id="1_qsmes"]
 [ext_resource type="PackedScene" uid="uid://d2hv3elprw2ee" path="res://Practice/fps/fps_player_template.tscn" id="2_1day3"]
@@ -39,6 +39,13 @@ size = Vector3(3.265, 1.01, 4.385)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qsmes"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1day3"]
+transparency = 1
+albedo_color = Color(0, 0.698039, 0.882353, 0.556863)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_okqi0"]
+albedo_color = Color(0.839216, 0.513726, 0.0784314, 1)
+
 [node name="Node3D" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -74,18 +81,7 @@ shape = SubResource("ConcavePolygonShape3D_pv3bs")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles/Object_5/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_h4rxx")
 
-[node name="Object_6" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1744, 4.50073, 8.4013)
-mesh = SubResource("BoxMesh_1day3")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles/Object_6"]
-transform = Transform3D(4, 0, 0, 0, 0.98, 0, 0, 0, 4, 0, 0, -0.511209)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles/Object_6/StaticBody3D"]
-shape = SubResource("BoxShape3D_qsmes")
-
-[node name="Object_7" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="5"]
+[node name="Object_7" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="4"]
 transform = Transform3D(1, 0, 0, 0, 0.627963, -0.778243, 0, 0.778243, 0.627963, -2.52283, 5.91362, 1.71252)
 visible = false
 mesh = SubResource("BoxMesh_1day3")
@@ -97,7 +93,7 @@ transform = Transform3D(4, 0, 0, 0, 0.98, 0, 0, 0, 4, 0, 0, -0.511209)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles/Object_7/StaticBody3D"]
 shape = SubResource("BoxShape3D_qsmes")
 
-[node name="Object_8" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="6"]
+[node name="Object_8" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="5"]
 transform = Transform3D(-4.37114e-08, 0.627963, -0.778243, -1, -2.74491e-08, 3.40181e-08, 2.22045e-16, 0.778243, 0.627963, -5.21148, 2.37803, 4.23307)
 visible = false
 mesh = SubResource("BoxMesh_1day3")
@@ -109,7 +105,7 @@ transform = Transform3D(4, 0, 0, 0, 0.98, 0, 0, 0, 4, 0, 0, -0.511209)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles/Object_8/StaticBody3D"]
 shape = SubResource("BoxShape3D_qsmes")
 
-[node name="Object_14" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="7"]
+[node name="Object_14" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="6"]
 transform = Transform3D(-4.37114e-08, 0.627963, -0.778243, -1, -2.74491e-08, 3.40181e-08, 2.22045e-16, 0.778243, 0.627963, -5.21278, 27.4928, 4.23307)
 visible = false
 mesh = SubResource("BoxMesh_1day3")
@@ -121,7 +117,7 @@ transform = Transform3D(4, 0, 0, 0, 0.98, 0, 0, 0, 4, 0, 0, -0.511209)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles/Object_14/StaticBody3D"]
 shape = SubResource("BoxShape3D_qsmes")
 
-[node name="Object_9" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="8"]
+[node name="Object_9" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="7"]
 transform = Transform3D(1, 0, 0, 0, 0.627963, -0.778243, 0, 0.778243, 0.627963, -27.43, 5.7316, 1.75652)
 mesh = SubResource("BoxMesh_1day3")
 skeleton = NodePath("../..")
@@ -132,7 +128,7 @@ transform = Transform3D(4, 0, 0, 0, 0.98, 0, 0, 0, 4, 0, 0, -0.511209)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles/Object_9/StaticBody3D"]
 shape = SubResource("BoxShape3D_qsmes")
 
-[node name="Object_10" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="9"]
+[node name="Object_10" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="8"]
 transform = Transform3D(1.31134e-07, -0.627963, 0.778243, 1, 8.23474e-08, -1.02054e-07, -1.77636e-15, 0.778243, 0.627963, -24.7932, 2.37803, 4.23307)
 visible = false
 mesh = SubResource("BoxMesh_1day3")
@@ -144,7 +140,7 @@ transform = Transform3D(4, 0, 0, 0, 0.98, 0, 0, 0, 4, 0, 0, -0.511209)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles/Object_10/StaticBody3D"]
 shape = SubResource("BoxShape3D_qsmes")
 
-[node name="Object_11" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="10"]
+[node name="Object_11" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="9"]
 transform = Transform3D(-1, -5.48983e-08, 6.80362e-08, 8.74228e-08, -0.627963, 0.778243, -1.94118e-23, 0.778243, 0.627963, -27.5101, 24.1047, 1.71252)
 visible = false
 mesh = SubResource("BoxMesh_1day3")
@@ -156,7 +152,7 @@ transform = Transform3D(4, 0, 0, 0, 0.98, 0, 0, 0, 4, 0, 0, -0.511209)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles/Object_11/StaticBody3D"]
 shape = SubResource("BoxShape3D_qsmes")
 
-[node name="Object_13" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="11"]
+[node name="Object_13" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="10"]
 transform = Transform3D(-1, -5.48983e-08, 6.80362e-08, 8.74228e-08, -0.627963, 0.778243, -1.94118e-23, 0.778243, 0.627963, -2.50428, 24.0116, 1.71252)
 visible = false
 mesh = SubResource("BoxMesh_1day3")
@@ -168,7 +164,7 @@ transform = Transform3D(4, 0, 0, 0, 0.98, 0, 0, 0, 4, 0, 0, -0.511209)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles/Object_13/StaticBody3D"]
 shape = SubResource("BoxShape3D_qsmes")
 
-[node name="Object_12" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="12"]
+[node name="Object_12" type="MeshInstance3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles" index="11"]
 transform = Transform3D(1.31134e-07, -0.627963, 0.778243, 1, 8.23474e-08, -1.02054e-07, -1.77636e-15, 0.778243, 0.627963, -24.9953, 27.3447, 4.23307)
 visible = false
 mesh = SubResource("BoxMesh_1day3")
@@ -180,25 +176,46 @@ transform = Transform3D(4, 0, 0, 0, 0.98, 0, 0, 0, 4, 0, 0, -0.511209)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_Scene/Sketchfab_model/b7f06c5a7c3f471f821f93c48db6a5d6_obj_cleaner_materialmerger_gles/Object_12/StaticBody3D"]
 shape = SubResource("BoxShape3D_qsmes")
 
+[node name="CSGBox3D3" type="CSGBox3D" parent="Sketchfab_Scene"]
+transform = Transform3D(0.44, 0, 0, 0, 0.44, 0, 0, 0, 1, -17.3715, 9.51265, -5.14515)
+operation = 2
+use_collision = true
+size = Vector3(3.72, 7.04218, 0.604736)
+material = SubResource("StandardMaterial3D_1day3")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Sketchfab_Scene"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3715, 9.87512, -5.149)
+use_collision = true
+size = Vector3(3.72, 3.7705, 1.148)
+material = SubResource("StandardMaterial3D_okqi0")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Sketchfab_Scene/CSGBox3D"]
+transform = Transform3D(0.44, 0, 0, 0, 0.44, 0, 0, 0, 1, 0, -0.362467, -0.108649)
+operation = 2
+use_collision = true
+size = Vector3(3.72, 7.04218, 1.37054)
+material = SubResource("StandardMaterial3D_okqi0")
+
 [node name="fps_player" parent="." instance=ExtResource("2_1day3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9814, 7.01684, -2.33069)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5811, 7.93868, -2.84303)
+next_level = "fpsmap_3"
 
 [node name="fps_enemy" parent="." instance=ExtResource("3_okqi0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.859, 2.04153, -7.29172)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -26.5081, 2.04153, -7.2568)
 
 [node name="fps_enemy2" parent="." instance=ExtResource("3_okqi0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.39346, 2.04153, -7.01809)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -7.90583, 2.04153, -7.30804)
 
 [node name="fps_enemy3" parent="." instance=ExtResource("3_okqi0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.81153, 2.04153, -19.6962)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.26409, 2.04153, -19.6962)
 
 [node name="fps_enemy4" parent="." instance=ExtResource("3_okqi0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2975, 2.04153, -22.7657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7312, 2.04153, -26.0933)
 
 [node name="fps_enemy5" parent="." instance=ExtResource("3_okqi0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0449, 2.04153, -17.2954)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.6835, 2.04153, -20.0599)
 
 [node name="fps_enemy6" parent="." instance=ExtResource("3_okqi0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5606, 6.95969, -27.4784)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5606, 8.05548, -31.3599)
 
 [editable path="Sketchfab_Scene"]
