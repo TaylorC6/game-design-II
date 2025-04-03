@@ -135,7 +135,7 @@ func _physics_process(delta):
 			is_reloading = true
 			audio_player.stream = reload_sound
 			audio_player.play()
-			await get_tree().create_timer(2).timeout
+			await get_tree().create_timer(1.25).timeout
 			var ammo_needed = CLIP_SIZE - AMMO
 			var new_ammo = min(ammo_needed, TOTAL_AMMO)
 			AMMO += new_ammo
