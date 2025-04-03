@@ -1,6 +1,7 @@
 
 extends CharacterBody3D
 
+@export var next_level = ""
 
 var SPEED = 7.0
 var NORMAL_SPEED = SPEED
@@ -22,6 +23,7 @@ const BOB_FREQ = 2.4
 const BOB_AMP = 0.08
 var t_bob = 0.0
 
+var win_bool = true
 
 var damage_shader = preload("res://Practice/assets/shaders/take_damage.tres")
 @onready var head = $Head
@@ -188,11 +190,22 @@ func _physics_process(delta):
 		get_tree().reload_current_scene()
 	
 	elif len(get_tree().get_nodes_in_group("Enemy")) <= 0:
-		await get_tree().create_timer(0.25).timeout
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		OS.alert("You win!")
+		if next_level != "":
+			var lvl = "res://Practice/" + next_level + ".tscn"
+			#TODO: loading
+			await get_tree().create_timer(0.1).timeout
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			print(lvl)
+			get_tree().change_scene_to_file(lvl)
+		else:
+			if win_bool == true:
+				OS.alert("You win!")
+				win_bool = false
+				await get_tree().create_timer(10).timeout
+				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+				get_tree().quit()
 		# TODO: change scene
-		get_tree().quit()
+		
 	
 	# Right Joystick
 	var joystick_index = 0

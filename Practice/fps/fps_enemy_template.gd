@@ -41,6 +41,8 @@ func is_player_in_sight(player):
 	return result.size() != 0 and result.collider == player
 
 func _physics_process(delta):
+	if Input.is_action_just_pressed("kill"):
+		queue_free()
 	for player in get_tree().get_nodes_in_group("Player"):
 		if $AttackRange.overlaps_body(player) or is_player_in_sight(player):
 			nav_agent.target_position = player.global_position
