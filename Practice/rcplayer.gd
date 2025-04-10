@@ -26,6 +26,13 @@ func _physics_process(delta: float) -> void:
 										global_position, delta * 20.0)
 	$centerMass.transform = $centerMass.transform.interpolate_with(
 										transform, delta * 5.0)
-	$centerMass/Camera3D.look_at(global_position.lerp(global_position * linear_velocity,
+	$centerMass/Camera3D.look_at(global_position.lerp(global_position + linear_velocity,
 									 delta * 5.0))
-	#TODO: check and right
+	check_and_right()
+
+func check_and_right():
+	if global_transform.basis.y.dot(Vector3.UP) < 0:
+		var cur_rotation = self.rotation_degrees
+		cur_rotation.x = 0 # Reset Pitch
+		cur_rotation.z = 0 # Reset Roll
+		self.rotation_degrees = cur_rotation

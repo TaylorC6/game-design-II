@@ -123,7 +123,7 @@ metadata/extras = {
 }
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4hgvd"]
-points = PackedVector3Array(0.6, 0.0999341, 0.43448, 0.349922, 0.536016, 1.27989, 0.6, 0, 0.43448, 0.6, 0.0999341, -0.165624, 0.549961, 0.388529, -0.0656481, -0.350039, 0.536016, 1.27989, 0.349922, 0, 1.27989, 0.549961, 0.388529, -0.165624, 0.0669538, 0.632544, 0.102982, 0.0669538, 0.632544, 0.202958, 0.6, 0, -0.165624, 0.449883, 0.149963, -1.27989, -0.6, 0.0999341, 0.43448, -0.350039, 0, 1.27989, -0.0670713, 0.632544, 0.202958, -0.0670713, 0.632544, 0.102982, -0.550078, 0.388529, -0.165624, -0.550078, 0.388529, -0.0656481, 0.449883, 0, -1.27989, -0.450117, 0.149963, -1.27989, -0.6, 0, 0.43448, -0.6, 0.0999341, -0.165624, -0.450117, 0, -1.27989, -0.6, 0, -0.165624)
+points = PackedVector3Array(0.6, 0.0999341, 0.43448, 0.349922, 0.536016, 1.27989, 0.6, 0.045, 0.434, 0.6, 0.0999341, -0.165624, 0.549961, 0.388529, -0.0656481, -0.350039, 0.536016, 1.27989, 0.35, 0.14, 1.13, 0.549961, 0.388529, -0.165624, 0.0669538, 0.632544, 0.102982, 0.0669538, 0.632544, 0.202958, 0.6, 0.045, -0.166, 0.45, 0.15, -0.855, -0.6, 0.0999341, 0.43448, -0.35, 0.14, 1.13, -0.0670713, 0.632544, 0.202958, -0.0670713, 0.632544, 0.102982, -0.550078, 0.388529, -0.165624, -0.550078, 0.388529, -0.0656481, 0.45, 0.06, -0.855, -0.45, 0.15, -0.855, -0.6, 0.045, 0.434, -0.6, 0.0999341, -0.165624, -0.45, 0.06, -0.855, -0.6, 0.045, -0.166)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qh3u0"]
 resource_name = "carTire"
@@ -228,46 +228,51 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34997e-13, 0.1, 0)
 shape = SubResource("ConvexPolygonShape3D_4hgvd")
+debug_color = Color(1, 1, 1, 0.419608)
 
 [node name="frontLeft" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.5, 0.3, -0.65)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.5, 0.306, -0.635438)
 use_as_steering = true
-wheel_radius = 0.3
+wheel_radius = 0.355
+suspension_stiffness = 5.8
 
 [node name="wheel_frontLeft" type="MeshInstance3D" parent="frontLeft"]
-transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -0.25, 0, -0.0168563)
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -0.25, -0.00599998, -0.00229436)
 mesh = SubResource("ArrayMesh_2gpyo")
 skeleton = NodePath("")
 
 [node name="frontRight" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.5, 0.3, -0.65)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.5, 0.306, -0.635438)
 use_as_steering = true
-wheel_radius = 0.3
+wheel_radius = 0.355
+suspension_stiffness = 5.8
 
 [node name="wheel_frontRight" type="MeshInstance3D" parent="frontRight"]
-transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 0.25, 0, -0.0168562)
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 0.25, -0.00599998, -0.00229436)
 mesh = SubResource("ArrayMesh_2gpyo")
 skeleton = NodePath("")
 
 [node name="backLeft" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.5, 0.3, 0.9)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.5, 0.306453, 0.862088)
 use_as_traction = true
-wheel_radius = 0.3
+wheel_radius = 0.355
 wheel_friction_slip = 9.5
+suspension_stiffness = 5.8
 
 [node name="wheel_backLeft" type="MeshInstance3D" parent="backLeft"]
-transform = Transform3D(1, 0, -2.38419e-07, 0, 1, 0, 2.38419e-07, 0, 1, -0.25, 0, 0.0331438)
+transform = Transform3D(1, 0, -2.38419e-07, 0, 1, 0, 2.38419e-07, 0, 1, -0.25, -0.00645325, -0.00476843)
 mesh = SubResource("ArrayMesh_2gpyo")
 skeleton = NodePath("")
 
 [node name="backRight" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.5, 0.3, 0.9)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.5, 0.306, 0.862)
 use_as_traction = true
-wheel_radius = 0.3
+wheel_radius = 0.355
 wheel_friction_slip = 9.5
+suspension_stiffness = 5.8
 
 [node name="wheel_backRight" type="MeshInstance3D" parent="backRight"]
-transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 0.25, 0, 0.0331438)
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 0.25, -0.00599998, -0.00485623)
 mesh = SubResource("ArrayMesh_2gpyo")
 skeleton = NodePath("")
 
@@ -287,6 +292,6 @@ offset_top = -129.0
 offset_right = 156.0
 grow_vertical = 0
 size_flags_horizontal = 4
-text = "   0 mph
+text = "      0 mph
 "
 label_settings = SubResource("LabelSettings_g1g6h")

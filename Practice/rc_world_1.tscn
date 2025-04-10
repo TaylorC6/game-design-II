@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmrnv7wccgoas"]
+[gd_scene load_steps=7 format=3 uid="uid://cmrnv7wccgoas"]
 
 [ext_resource type="MeshLibrary" uid="uid://rfnqre58pfu8" path="res://Practice/assets/race/rc_tiles_1.tres" id="1_p8obh"]
 [ext_resource type="PackedScene" uid="uid://b6rnvhjpbhlgx" path="res://Practice/rcplayer.tscn" id="2_iqvmn"]
+[ext_resource type="PackedScene" uid="uid://0xaibo3lpe2h" path="res://Practice/rc_enemy.tscn" id="3_e1iwj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_iqvmn"]
 sky_top_color = Color(0.226253, 0.464606, 0.684452, 1)
@@ -43,4 +44,22 @@ cell_size = Vector3(1, 1, 1)
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="rc_player" parent="." instance=ExtResource("2_iqvmn")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.11289, 0.01995, 0.992603)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.99463, 0.01995, 3.05907)
+
+[node name="rc_enemy" parent="." instance=ExtResource("3_e1iwj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.6447, 7.15256e-07, 1.66214)
+
+[node name="rc_enemy4" parent="." instance=ExtResource("3_e1iwj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.9051, 7.15256e-07, 1.66214)
+
+[node name="rc_enemy5" parent="." instance=ExtResource("3_e1iwj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15.7763, 7.15256e-07, 1.66214)
+
+[node name="rc_enemy2" parent="." instance=ExtResource("3_e1iwj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.6447, 7.15256e-07, 3.9878)
+
+[node name="rc_enemy3" parent="." instance=ExtResource("3_e1iwj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.9917, 7.15256e-07, 3.9878)
+
+[node name="rc_enemy6" parent="." instance=ExtResource("3_e1iwj")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15.6775, 7.15256e-07, 3.9878)
