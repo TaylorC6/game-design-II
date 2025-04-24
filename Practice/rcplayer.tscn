@@ -217,7 +217,7 @@ metadata/extras = {
 [sub_resource type="LabelSettings" id="LabelSettings_g1g6h"]
 font_size = 45
 
-[node name="rc_player" type="VehicleBody3D"]
+[node name="rc_player" type="VehicleBody3D" groups=["Player"]]
 script = ExtResource("1_fvinh")
 
 [node name="body" type="MeshInstance3D" parent="."]
@@ -292,6 +292,22 @@ offset_top = -129.0
 offset_right = 156.0
 grow_vertical = 0
 size_flags_horizontal = 4
-text = "      0 mph
+text = "     0 mph
 "
 label_settings = SubResource("LabelSettings_g1g6h")
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -208.0
+offset_top = -129.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 4
+text = "Lap 1/3"
+label_settings = SubResource("LabelSettings_g1g6h")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]

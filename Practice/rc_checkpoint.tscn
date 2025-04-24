@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvue3u7i3nw5v"]
+
+[ext_resource type="Script" uid="uid://0kw343klphq2" path="res://Practice/rc_checkpoint.gd" id="1_ivdy4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3pr4d"]
+size = Vector3(1, 48.1833, 42.6865)
+
+[node name="rc_checkpoint" type="Area3D"]
+script = ExtResource("1_ivdy4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.581186, -0.422382)
+shape = SubResource("BoxShape3D_3pr4d")
+debug_color = Color(1, 1, 1, 1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

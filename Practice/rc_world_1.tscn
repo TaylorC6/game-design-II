@@ -63,3 +63,5 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -42.16
 
 [node name="rc_enemy6" parent="." instance=ExtResource("3_e1iwj")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -61.0953, -2.39187, 7.66466)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

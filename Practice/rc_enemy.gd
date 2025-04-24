@@ -16,6 +16,13 @@ var is_stuck = false
 @onready var rayL  = $rayLeft
 @onready var rayR  = $rayRight
 
+var stutter_aud = preload("res://Practice/assets/race/car_sound_effects_pack/Car_Engine_Loop.ogg")
+var start_aud = preload("res://Practice/assets/race/car_sound_effects_pack/Car_Acceleration.ogg")
+var engine_aud = preload("res://Practice/assets/race/engine-loop/engine-loop-1.wav")
+var aud_bools = false # controls startup sounds stopping
+var f = true
+var g = true
+
 func _ready() -> void:
 	var mat = $body.mesh.surface_get_material(0)
 	var old_hsv = mat.albedo_color
@@ -79,3 +86,27 @@ func _physics_process(delta: float) -> void:
 	$backLeft.engine_force = calc_engine_force(acceleration, abs($backLeft.get_rpm()))
 	$backRight.engine_force = calc_engine_force(acceleration, abs($backRight.get_rpm()))
 	check_and_right()
+	
+	if acceleration != 0:
+		var max_dB = 6
+		var dB = clamp(max_dB * abs($backLeft.engine_force/MAX_RPM), -10, max_dB)
+		$AudioStreamPlayer3DE.volume_db = dB
+	
+		if f:
+			$AudioStreamPlayer3DE.stream = start_aud
+			$AudioStreamPlayer3DE.play()
+			f = false
+		if not $AudioStreamPlayer3DE.is_playing() and g:
+			$AudioStreamPlayer3DE.stream = stutter_aud
+			$AudioStreamPlayer3DE.play()
+			g = false
+		if not $AudioStreamPlayer3DE.playing:
+			aud_bools = true # engine base sound starts
+			if aud_bools:
+				$AudioStreamPlayer3DE.stream = engine_aud
+				$AudioStreamPlayer3DE.play() # change the stream to the vroom sound and play
+	else :
+		$AudioStreamPlayer3DE.volume_db = 2  # default
+		aud_bools = false
+		f = true
+		g = true
