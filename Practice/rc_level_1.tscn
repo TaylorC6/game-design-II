@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://d10vl0tnvv60r"]
+[gd_scene load_steps=8 format=3 uid="uid://d10vl0tnvv60r"]
 
 [ext_resource type="MeshLibrary" uid="uid://rfnqre58pfu8" path="res://Practice/assets/race/rc_tiles_1.tres" id="1_tik8i"]
 [ext_resource type="PackedScene" uid="uid://b6rnvhjpbhlgx" path="res://Practice/rcplayer.tscn" id="2_3uoxu"]
 [ext_resource type="PackedScene" uid="uid://bo0g7ff5fgthl" path="res://Practice/rc_enemy.tscn" id="3_1dkyp"]
+[ext_resource type="PackedScene" uid="uid://bvue3u7i3nw5v" path="res://Practice/rc_checkpoint.tscn" id="4_1dkyp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_25rr1"]
 sky_top_color = Color(0.792157, 0.423529, 0.509804, 1)
@@ -51,3 +52,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14982, 2.5, -5.92739)
 
 [node name="rc_enemy4" parent="." instance=ExtResource("3_1dkyp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59219, 2.5, 3.17958)
+
+[node name="rc_checkpoint" parent="." instance=ExtResource("4_1dkyp")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.919056, 0.833755, -27.1278)
+priority = 3
+
+[node name="rc_checkpoint4" parent="." instance=ExtResource("4_1dkyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.9497, 14.556, -67.2329)
+
+[node name="rc_checkpoint2" parent="." instance=ExtResource("4_1dkyp")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 64.5231, 19.39, -2.04449)
+priority = 1
+
+[node name="rc_checkpoint3" parent="." instance=ExtResource("4_1dkyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2394, 5.7371, 53.631)
+priority = 2
